@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}?{% now "U" %}"/>
+    <script src="{% static 'js/main.js' %}?{% now "U" %}"></script>
+    <title></title>
+    <style>
+.center {
+  text-align: center;
+  border: 2px solid green;
+}
+.scroll-left {
+ height: 50px;
+ overflow: hidden;
+ position: relative;
+
+ color:red;
+
+}
+.scroll-left p {
+ position: absolute;
+ width: 100%;
+ color: red;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ transform:translateX(100%);
+ /* Apply animation to this element */
+ animation: scroll-left 30s linear infinite;
+}
+/* Move it (define the animation) */
+@keyframes scroll-left {
+ 0%   {
+ transform: translateX(100%);
+ }
+ 100% {
+ transform: translateX(-100%);
+ }
+}
+</style>
+  </head>
+  <body>
+    <div class="center">
+<h1>Python QA Forum</h1>
+</div>
+<div class="scroll-left">
+ <p>Updates <a href="{% url 'cr' %}">Clickhere to Course Registration</a>  </p>
+</div>
+
+
+    <div class="main">
+    {% include 'navbar.html' %}
+    {% block content %}
+    {% endblock %}
+    </div>
+    <div class="center">
+      <iframe width="170" height="150" src="https://www.youtube.com/embed/I7kVG2O4wDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="170" height="150" src="https://www.youtube.com/embed/I7kVG2O4wDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="170" height="150" src="https://www.youtube.com/embed/I7kVG2O4wDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="170" height="150" src="https://www.youtube.com/embed/I7kVG2O4wDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="170" height="150" src="https://www.youtube.com/embed/I7kVG2O4wDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="170" height="150" src="https://www.youtube.com/embed/I7kVG2O4wDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<br>
+<div class="center">
+<p>contact : jaganmohan.gavvala@gmail.com   WhatsApp:+91-9347604014</p>
+  </body>
+</html>
